@@ -4,7 +4,7 @@
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
   width: 220px;
-  margin-left: 220px;
+  margin-left: 310px;
 }
 
 .gallery > img {
@@ -175,3 +175,4 @@ body {
   transform: scale(1.08);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
