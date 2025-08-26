@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa - Thiago e Sther</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    video {
+      max-width: 90%;
+      max-height: 70vh;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff9ecd, #ff5fa2, #ff2e7e);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .back-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video controls>
+      <source src="imagens/video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+
+    <!-- Botão voltar -->
+    <a href="index.html" class="back-btn">⬅ Voltar</a>
+  </div>
+</body>
+</html>

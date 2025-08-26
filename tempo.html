@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo - Thiago e Sther</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .timer-container {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+
+    #title {
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+    }
+
+    #timer {
+      font-size: 28px;
+      background: rgba(0,0,0,0.3);
+      padding: 15px 25px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer-container">
+    <div id="title">EU TE AMO FAZ...</div>
+    <div id="timer">Carregando...</div>
+  </div>
+
+  <script>
+    function updateTimer() {
+      // Data de início: 11 de julho às 18:00
+      const startDate = new Date("2025-07-11T18:00:00");
+      const now = new Date();
+      const diff = now - startDate;
+
+      // Converte diferença
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("timer").innerHTML =
+        `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+ <!-- Botão voltar -->
+    <a href="index.html" class="back-btn">⬅ Voltar</a>
+  </div>
+</body>
+</html>
